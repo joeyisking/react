@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>
+
+</head>
+
+<body>
+
+	<script type="text/jsx">
+		var Avatar = React.createClass({
+			getDefaultProps: function(){
+
+				return {
+					path: "http://bit.ly/1NABbkf"
+				};
+			},
+			render: function() {
+				return (
+					
+					<div>
+						<a href={this.props.path}>
+						 	<img src={this.props.path} />
+						 </a>
+					</div>
+				);
+			}
+
+		});
+
+		React.render(<Avatar path="http://bit.ly/19FPeaP"/>, document.body);
+
+	</script>
+
+</body>
+</html>
