@@ -6,7 +6,7 @@ var source = require('vinyl-source-stream');
 gulp.task('browserify', function() {
     return browserify()
         .require('js/app.js', { entry: true,  
-        	extensions: ['.js', '.json', 'es6'], 
+        	extensions: ['.js'], 
         	debug: true 
         })
         .transform(babelify, {presets: ["stage-0", "react"]})
