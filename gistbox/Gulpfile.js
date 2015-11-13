@@ -9,8 +9,8 @@ gulp.task('browserify', function() {
         	extensions: ['.js'], 
         	debug: true 
         })
-        .transform(babelify, {presets: ["stage-0", "react"]})
-        .bundle()
+        .transform(babelify, {presets: ["es2015", "stage-0", "react"]})
+		.bundle()
         .pipe(source('bundle.js'))
         .pipe(gulp.dest('js'));
 });
